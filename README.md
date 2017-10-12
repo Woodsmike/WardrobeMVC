@@ -39,3 +39,4 @@ You should customize all of your views to develop the best user experience you c
 Stretch Tasks
 A natural progression of this app is to support the creation of outfits - a collection of coordinating tops/bottoms/shoes/accessories. Build this into your model, and create views for working with outfits.
 Ultimately, your views should be integrated, so you can see all the pictures of each item per outfit.
+
