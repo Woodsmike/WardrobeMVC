@@ -1,0 +1,64 @@
+﻿@model WardrobeMVC.Models.WorkOutfit
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>WorkOutfit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Outfit.OutfitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Outfit.OutfitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkAccessory.WorkAccessoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkAccessory.WorkAccessoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkBottom.WorkBottomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkBottom.WorkBottomName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkSho.WorkShoesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkSho.WorkShoesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkTop.WorkTopName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkTop.WorkTopName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

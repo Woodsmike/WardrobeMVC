@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WardrobeMVC.Models.WorkOutfit>
+
+@{
+    ViewBag.Title = "Work";
+}
+
+<h2 style="text-align:center; color:#B8A499;">Work Oufits</h2>
+
+<h3 class="reviewH3 softWhiteBG">
+    @Html.ActionLink("Create a New Outfit", "Create")
+</h3>
+
+<div class="row container-fluid" style="margin:auto;">
+    @foreach (var item in Model)
+    {
+        <div style=" border: .5px solid black;">
+            <h3 style="text-align:center; color:#FFF6F0; font-size: 30px; padding-bottom:20px;">
+                <span>
+                    @Html.DisplayFor(modelItem => item.Outfit.OutfitName)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.ActionLink("View Details", "Details", new { id = item.WorkOutfitID }, new { role = "button", @class = "btn btn-primary" })
+                </span>
+            </h3>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="thumbnail">
+                    <div class="caption text-center">
+                        <h3>@Html.DisplayFor(modelItem => item.WorkTop.WorkTopName)</h3>
+                        <p>
+                            <img src="@Url.Content("~/Content/Images/MensDressShirt.jpg")" class="img-thumbnail img-responsive imgIndex" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="thumbnail">
+                    <div class="caption text-center">
+                        <h3>@Html.DisplayFor(modelItem => item.WorkBottom.WorkBottomName)</h3>
+                        <p>
+                            <img src="@Url.Content("~/Content/Images/slacks.jpg" )" class="img-thumbnail img-responsive imgIndex" />
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="thumbnail">
+                    <div class="caption text-center">
+                        <h3>@Html.DisplayFor(modelItem => item.WorkSho.WorkShoesName)</h3>
+                        <p>
+                            <img src="@Url.Content("~/Content/Images/MensDressShoes.jpg")" class="img-thumbnail img-responsive imgIndex" />
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="thumbnail">
+                    <div class="caption text-center">
+                        <h3>@Html.DisplayFor(modelItem => item.WorkAccessory.WorkAccessoryName)</h3>
+                        <p>
+                            <img src="@Url.Content("~/Content/Images/watchAccessory.jpg")" class="img-thumbnail img-responsive imgIndex" />
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+            <br />
+    }
+
+</div>
+

@@ -1,0 +1,38 @@
+﻿@model WardrobeMVC.Models.FormalTop
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h3 style="text-align:center; color:#FFF6F0; font-size:50px; font-family: 'Lemonada';">Details</h3>
+
+<hr />
+<div class="container" style="margin:auto; margin-top: 20px;">
+    <div class="col-md-5 detail" style="margin-right:15px;">
+        Bottom
+        <h3 class="well well-sm wellBGShoes">
+            <span>Brand:  </span><span style="float:right;">@Html.DisplayFor(model => model.FormalTopName)</span>
+        </h3>
+        <h3 class="well well-sm wellBGShoes">
+            <span>Type: </span><span style="float:right;"> @Html.DisplayFor(model => model.FormalTopType)</span>
+        </h3>
+        <h3 class="well well-sm wellBGShoes">
+            <span>Color: </span><span style="float:right;">@Html.DisplayFor(model => model.FormalTopColor)</span>
+        </h3>
+        <h3 class="well well-sm wellBGShoes">
+            <span>Season: </span><span style="float:right;"> @Html.DisplayFor(model => model.FormalTopSeason)</span>
+        </h3>
+        <h3 class="well well-sm wellBGShoes">
+            <span>Occasion: </span><span style="float:right;">@Html.DisplayFor(model => model.FormalTopOccasion)</span>
+        </h3>
+    </div>
+    <div class="col-md-5 detail" style="margin:auto; margin-left:150px; padding-bottom: 5.2px; margin-bottom:25px;">
+        <h2>
+            <img class="myImgShoes" src=@Url.Content(Model.FormalTopPhoto) />
+        </h2>
+        <p style="font-size:25px; text-align:center;">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.FormalTopID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>

@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCWardrobeModelStoreContainer" CdmEntityContainer="MVCWardrobeEntities">
+    <EntitySetMapping Name="FormalAccessories">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.FormalAccessory">
+        <MappingFragment StoreEntitySet="FormalAccessory">
+          <ScalarProperty Name="FormalAccessoryID" ColumnName="FormalAccessoryID" />
+          <ScalarProperty Name="FormalAccessoryName" ColumnName="FormalAccessoryName" />
+          <ScalarProperty Name="FormalAccessoryPhoto" ColumnName="FormalAccessoryPhoto" />
+          <ScalarProperty Name="FormalAccessoryColor" ColumnName="FormalAccessoryColor" />
+          <ScalarProperty Name="FormalAccessorySeason" ColumnName="FormalAccessorySeason" />
+          <ScalarProperty Name="FormalAccessoryOccasion" ColumnName="FormalAccessoryOccasion" />
+          <ScalarProperty Name="FormalAccessoryType" ColumnName="FormalAccessoryType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormalBottoms">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.FormalBottom">
+        <MappingFragment StoreEntitySet="FormalBottom">
+          <ScalarProperty Name="FormalBottomID" ColumnName="FormalBottomID" />
+          <ScalarProperty Name="FormalBottomName" ColumnName="FormalBottomName" />
+          <ScalarProperty Name="FormalBottomPhoto" ColumnName="FormalBottomPhoto" />
+          <ScalarProperty Name="FormalBottomColor" ColumnName="FormalBottomColor" />
+          <ScalarProperty Name="FormalBottomSeason" ColumnName="FormalBottomSeason" />
+          <ScalarProperty Name="FormalBottomOccasion" ColumnName="FormalBottomOccasion" />
+          <ScalarProperty Name="FormalBottomType" ColumnName="FormalBottomType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormalOutfits">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.FormalOutfit">
+        <MappingFragment StoreEntitySet="FormalOutfit">
+          <ScalarProperty Name="FormalOutfitID" ColumnName="FormalOutfitID" />
+          <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+          <ScalarProperty Name="FormalTopID" ColumnName="FormalTopID" />
+          <ScalarProperty Name="FormalBottomID" ColumnName="FormalBottomID" />
+          <ScalarProperty Name="FormalShoesID" ColumnName="FormalShoesID" />
+          <ScalarProperty Name="FormalAccessoryID" ColumnName="FormalAccessoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormalShoes">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.FormalSho">
+        <MappingFragment StoreEntitySet="FormalShoes">
+          <ScalarProperty Name="FormalShoesID" ColumnName="FormalShoesID" />
+          <ScalarProperty Name="FormalShoesName" ColumnName="FormalShoesName" />
+          <ScalarProperty Name="FormalShoesPhoto" ColumnName="FormalShoesPhoto" />
+          <ScalarProperty Name="FormalShoesColor" ColumnName="FormalShoesColor" />
+          <ScalarProperty Name="FormalShoesSeason" ColumnName="FormalShoesSeason" />
+          <ScalarProperty Name="FormalShoesOccasion" ColumnName="FormalShoesOccasion" />
+          <ScalarProperty Name="FormalShoesType" ColumnName="FormalShoesType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormalTops">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.FormalTop">
+        <MappingFragment StoreEntitySet="FormalTop">
+          <ScalarProperty Name="FormalTopID" ColumnName="FormalTopID" />
+          <ScalarProperty Name="FormalTopName" ColumnName="FormalTopName" />
+          <ScalarProperty Name="FormalTopPhoto" ColumnName="FormalTopPhoto" />
+          <ScalarProperty Name="FormalTopColor" ColumnName="FormalTopColor" />
+          <ScalarProperty Name="FormalTopSeason" ColumnName="FormalTopSeason" />
+          <ScalarProperty Name="FormalTopOccasion" ColumnName="FormalTopOccasion" />
+          <ScalarProperty Name="FormalTopType" ColumnName="FormalTopType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformalAccessories">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.InformalAccessory">
+        <MappingFragment StoreEntitySet="InformalAccessory">
+          <ScalarProperty Name="InformalAccessoryID" ColumnName="InformalAccessoryID" />
+          <ScalarProperty Name="InformalAccessoryName" ColumnName="InformalAccessoryName" />
+          <ScalarProperty Name="InformalAccessoryPhoto" ColumnName="InformalAccessoryPhoto" />
+          <ScalarProperty Name="InformalAccessoryColor" ColumnName="InformalAccessoryColor" />
+          <ScalarProperty Name="InformalAccessorySeason" ColumnName="InformalAccessorySeason" />
+          <ScalarProperty Name="InformalAccessoryOccasion" ColumnName="InformalAccessoryOccasion" />
+          <ScalarProperty Name="InformalAccessoryType" ColumnName="InformalAccessoryType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformalBottoms">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.InformalBottom">
+        <MappingFragment StoreEntitySet="InformalBottom">
+          <ScalarProperty Name="InformalBottomID" ColumnName="InformalBottomID" />
+          <ScalarProperty Name="InformalBottomName" ColumnName="InformalBottomName" />
+          <ScalarProperty Name="InformalBottomPhoto" ColumnName="InformalBottomPhoto" />
+          <ScalarProperty Name="InformalBottomColor" ColumnName="InformalBottomColor" />
+          <ScalarProperty Name="InformalBottomSeason" ColumnName="InformalBottomSeason" />
+          <ScalarProperty Name="InformalBottomOccasion" ColumnName="InformalBottomOccasion" />
+          <ScalarProperty Name="InformalBottomType" ColumnName="InformalBottomType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformalOutfits">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.InformalOutfit">
+        <MappingFragment StoreEntitySet="InformalOutfit">
+          <ScalarProperty Name="InformalOutfitID" ColumnName="InformalOutfitID" />
+          <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+          <ScalarProperty Name="InformalTopID" ColumnName="InformalTopID" />
+          <ScalarProperty Name="InformalBottomID" ColumnName="InformalBottomID" />
+          <ScalarProperty Name="InformalShoesID" ColumnName="InformalShoesID" />
+          <ScalarProperty Name="InformalAccessoryID" ColumnName="InformalAccessoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformalShoes">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.InformalSho">
+        <MappingFragment StoreEntitySet="InformalShoes">
+          <ScalarProperty Name="InformalShoesID" ColumnName="InformalShoesID" />
+          <ScalarProperty Name="InformalShoesName" ColumnName="InformalShoesName" />
+          <ScalarProperty Name="InformalShoesPhoto" ColumnName="InformalShoesPhoto" />
+          <ScalarProperty Name="InformalShoesColor" ColumnName="InformalShoesColor" />
+          <ScalarProperty Name="InformalShoesSeason" ColumnName="InformalShoesSeason" />
+          <ScalarProperty Name="InformalShoesOccasion" ColumnName="InformalShoesOccasion" />
+          <ScalarProperty Name="InformalShoesType" ColumnName="InformalShoesType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformalTops">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.InformalTop">
+        <MappingFragment StoreEntitySet="InformalTop">
+          <ScalarProperty Name="InformalTopID" ColumnName="InformalTopID" />
+          <ScalarProperty Name="InformalTopName" ColumnName="InformalTopName" />
+          <ScalarProperty Name="InformalTopPhoto" ColumnName="InformalTopPhoto" />
+          <ScalarProperty Name="InformalTopColor" ColumnName="InformalTopColor" />
+          <ScalarProperty Name="InformalTopSeason" ColumnName="InformalTopSeason" />
+          <ScalarProperty Name="InformalTopOccasion" ColumnName="InformalTopOccasion" />
+          <ScalarProperty Name="InformalTopType" ColumnName="InformalTopType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeisureAccessories">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureAccessory">
+        <MappingFragment StoreEntitySet="LeisureAccessory">
+          <ScalarProperty Name="LeisureAccessoryID" ColumnName="LeisureAccessoryID" />
+          <ScalarProperty Name="LeisureAccessoryName" ColumnName="LeisureAccessoryName" />
+          <ScalarProperty Name="LeisureAccessoryPhoto" ColumnName="LeisureAccessoryPhoto" />
+          <ScalarProperty Name="LeisureAccessoryColor" ColumnName="LeisureAccessoryColor" />
+          <ScalarProperty Name="LeisureAccessorySeason" ColumnName="LeisureAccessorySeason" />
+          <ScalarProperty Name="LeisureAccessoryOccasion" ColumnName="LeisureAccessoryOccasion" />
+          <ScalarProperty Name="LeisureAccessoryType" ColumnName="LeisureAccessoryType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeisureBottoms">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureBottom">
+        <MappingFragment StoreEntitySet="LeisureBottom">
+          <ScalarProperty Name="LeisureBottomID" ColumnName="LeisureBottomID" />
+          <ScalarProperty Name="LeisureBottomName" ColumnName="LeisureBottomName" />
+          <ScalarProperty Name="LeisureBottomPhoto" ColumnName="LeisureBottomPhoto" />
+          <ScalarProperty Name="LeisureBottomColor" ColumnName="LeisureBottomColor" />
+          <ScalarProperty Name="LeisureBottomSeason" ColumnName="LeisureBottomSeason" />
+          <ScalarProperty Name="LeisureBottomOccasion" ColumnName="LeisureBottomOccasion" />
+          <ScalarProperty Name="LeisureBottomType" ColumnName="LeisureBottomType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeisureOutfits">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureOutfit">
+        <MappingFragment StoreEntitySet="LeisureOutfit">
+          <ScalarProperty Name="LeisureOutfitID" ColumnName="LeisureOutfitID" />
+          <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+          <ScalarProperty Name="LeisureTopID" ColumnName="LeisureTopID" />
+          <ScalarProperty Name="LeisureBottomID" ColumnName="LeisureBottomID" />
+          <ScalarProperty Name="LeisureShoesID" ColumnName="LeisureShoesID" />
+          <ScalarProperty Name="LeisureAccessoryID" ColumnName="LeisureAccessoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeisureShoes">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureSho">
+        <MappingFragment StoreEntitySet="LeisureShoes">
+          <ScalarProperty Name="LeisureShoesID" ColumnName="LeisureShoesID" />
+          <ScalarProperty Name="LeisureShoesName" ColumnName="LeisureShoesName" />
+          <ScalarProperty Name="LeisureShoesPhoto" ColumnName="LeisureShoesPhoto" />
+          <ScalarProperty Name="LeisureShoesColor" ColumnName="LeisureShoesColor" />
+          <ScalarProperty Name="LeisureShoesSeason" ColumnName="LeisureShoesSeason" />
+          <ScalarProperty Name="LeisureShoesOccasion" ColumnName="LeisureShoesOccasion" />
+          <ScalarProperty Name="LeisureShoesType" ColumnName="LeisureShoesType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeisureTops">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureTop">
+        <MappingFragment StoreEntitySet="LeisureTop">
+          <ScalarProperty Name="LeisureTopID" ColumnName="LeisureTopID" />
+          <ScalarProperty Name="LeisureTopName" ColumnName="LeisureTopName" />
+          <ScalarProperty Name="LeisureTopPhoto" ColumnName="LeisureTopPhoto" />
+          <ScalarProperty Name="LeisureTopColor" ColumnName="LeisureTopColor" />
+          <ScalarProperty Name="LeisureTopSeason" ColumnName="LeisureTopSeason" />
+          <ScalarProperty Name="LeisureTopOccasion" ColumnName="LeisureTopOccasion" />
+          <ScalarProperty Name="LeisureTopType" ColumnName="LeisureTopType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Outfits">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.Outfit">
+        <MappingFragment StoreEntitySet="Outfit">
+          <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+          <ScalarProperty Name="OutfitName" ColumnName="OutfitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkAccessories">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.WorkAccessory">
+        <MappingFragment StoreEntitySet="WorkAccessory">
+          <ScalarProperty Name="WorkAccessoryID" ColumnName="WorkAccessoryID" />
+          <ScalarProperty Name="WorkAccessoryName" ColumnName="WorkAccessoryName" />
+          <ScalarProperty Name="WorkAccessoryPhoto" ColumnName="WorkAccessoryPhoto" />
+          <ScalarProperty Name="WorkAccessoryColor" ColumnName="WorkAccessoryColor" />
+          <ScalarProperty Name="WorkAccessorySeason" ColumnName="WorkAccessorySeason" />
+          <ScalarProperty Name="WorkAccessoryOccasion" ColumnName="WorkAccessoryOccasion" />
+          <ScalarProperty Name="WorkAccessoryType" ColumnName="WorkAccessoryType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkBottoms">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.WorkBottom">
+        <MappingFragment StoreEntitySet="WorkBottom">
+          <ScalarProperty Name="WorkBottomID" ColumnName="WorkBottomID" />
+          <ScalarProperty Name="WorkBottomName" ColumnName="WorkBottomName" />
+          <ScalarProperty Name="WorkBottomPhoto" ColumnName="WorkBottomPhoto" />
+          <ScalarProperty Name="WorkBottomColor" ColumnName="WorkBottomColor" />
+          <ScalarProperty Name="WorkBottomSeason" ColumnName="WorkBottomSeason" />
+          <ScalarProperty Name="WorkBottomOccasion" ColumnName="WorkBottomOccasion" />
+          <ScalarProperty Name="WorkBottomType" ColumnName="WorkBottomType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOutfits">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.WorkOutfit">
+        <MappingFragment StoreEntitySet="WorkOutfit">
+          <ScalarProperty Name="WorkOutfitID" ColumnName="WorkOutfitID" />
+          <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+          <ScalarProperty Name="WorkTopID" ColumnName="WorkTopID" />
+          <ScalarProperty Name="WorkBottomID" ColumnName="WorkBottomID" />
+          <ScalarProperty Name="WorkShoesID" ColumnName="WorkShoesID" />
+          <ScalarProperty Name="WorkAccessoryID" ColumnName="WorkAccessoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkShoes">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.WorkSho">
+        <MappingFragment StoreEntitySet="WorkShoes">
+          <ScalarProperty Name="WorkShoesID" ColumnName="WorkShoesID" />
+          <ScalarProperty Name="WorkShoesName" ColumnName="WorkShoesName" />
+          <ScalarProperty Name="WorkShoesPhoto" ColumnName="WorkShoesPhoto" />
+          <ScalarProperty Name="WorkShoesColor" ColumnName="WorkShoesColor" />
+          <ScalarProperty Name="WorkShoesSeason" ColumnName="WorkShoesSeason" />
+          <ScalarProperty Name="WorkShoesOccasion" ColumnName="WorkShoesOccasion" />
+          <ScalarProperty Name="WorkShoesType" ColumnName="WorkShoesType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkTops">
+      <EntityTypeMapping TypeName="MVCWardrobeModel.WorkTop">
+        <MappingFragment StoreEntitySet="WorkTop">
+          <ScalarProperty Name="WorkTopID" ColumnName="WorkTopID" />
+          <ScalarProperty Name="WorkTopName" ColumnName="WorkTopName" />
+          <ScalarProperty Name="WorkTopPhoto" ColumnName="WorkTopPhoto" />
+          <ScalarProperty Name="WorkTopColor" ColumnName="WorkTopColor" />
+          <ScalarProperty Name="WorkTopSeason" ColumnName="WorkTopSeason" />
+          <ScalarProperty Name="WorkTopOccasion" ColumnName="WorkTopOccasion" />
+          <ScalarProperty Name="WorkTopType" ColumnName="WorkTopType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

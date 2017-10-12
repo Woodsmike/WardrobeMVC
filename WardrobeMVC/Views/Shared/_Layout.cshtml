@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wardrobe - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans+Condensed:300|PT+Sans|Raleway|Saira+Condensed|Sedgwick+Ave+Display" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body style="background-color:#565553;">
+    <div>
+        <!--For best results of keeping the header section responsive I needed to enclose the navbar with this container-->
+        <nav class="navbar navbar-static-top navvy">
+            <!--the id is to keep the items in the navbar from having hover background colors-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*<a class="navbar-brand" style="padding-top:0; " href="~/Home/Index"><img class="img-responsive" id="logoImg" src="~/Content/Images/MadeLogo.png" /></a>*@
+                <h1 class="txtShd" style="display:inline; margin-top:25px; margin-left:65px;">@Html.ActionLink("My Wardrobe", "Index", "Home")</h1>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin-right:65px;">
+                    <li class="dropdown txtShd" id="middleHover">
+                        <a href="javascript:void(0)" class="dropbtn">What's in My Closet</a>
+                        <div class="dropdown-content">
+                            <a href="../WorkOutfits/Index" )>Work &nbsp;Oufits</a>
+                            <a href="../LeisureOutfits/Index" )>Leisure &nbsp;Outfits</a>
+                            <a href="../InformalOutfits/Index" )>Informal &nbsp;Outfits</a>
+                            <a href="../FormalOutfits/Index" )>Formal &nbsp;Oufits</a>
+                        </div>
+                    @*<li class="txtShd" id="middleHover">@Html.ActionLink("What's in My Closet", "Index", "Outfits")</li>*@
+                   
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Work</a>
+                        <div class="dropdown-content">
+                            <a href="../WorkTops/Index" )>Tops</a>
+                            <a href="../WorkBottoms/Index" )>Bottoms</a>
+                            <a href="../WorkShoes/Index" )>Shoes</a>
+                            <a href="../WorkAccessories/Index" )>Accessories</a>
+                        </div>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Leisure</a>
+                        <div class="dropdown-content">
+                            <a href="../LeisureTops/Index" )>Tops</a>
+                            <a href="../LeisureBottoms/Index" )>Bottoms</a>
+                            <a href="../LeisureShoes/Index" )>Shoes</a>
+                            <a href="../LeisureAccessories/Index" )>Accessories</a>
+                        </div>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Informal</a>
+                        <div class="dropdown-content">
+                            <a href="../InformalTops/Index" )>Tops</a>
+                            <a href="../InformalBottoms/Index" )>Bottoms</a>
+                            <a href="../InformalShoes/Index" )>Shoes</a>
+                            <a href="../InformalAccessories/Index" )>Accessories</a>
+                        </div>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Formal</a>
+                        <div class="dropdown-content">
+                            <a href="../FormalTops/Index" )>Tops</a>
+                            <a href="../FormalBottoms/Index" )>Bottoms</a>
+                            <a href="../FormalShoes/Index" )>Shoes</a>
+                            <a href="../FormalAccessories/Index")>Accessories</a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+
+    <div>
+        @RenderBody()
+        <hr style="background-color:#FFF6F0; border-bottom:3px; border-color:#474E5D; margin:0;" />
+        <footer class="fullWidth" style="padding:0;">
+            <div class="lightWithBG">
+                <center><button onclick="topFunction()" id="myBtn" title="Go to Top">^</button></center>
+                <h1 id="locFooter">My Wardrobe</h1>
+            </div>
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
+

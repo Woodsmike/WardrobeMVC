@@ -1,0 +1,148 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="padding-bottom:5px; margin-bottom:0;">
+
+    <div class="container" id="carStyle">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators height">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" style="height:550px;">
+                <!--had to use a inline style to make the height of the carousel inner 200px in order to properly show on screen-->
+                <div class="item active">
+                    <h2 class="carouselText">Formal Outfit</h2>
+                    <div class="col-md-4" style="margin:0;">
+                        <a href="../FormalTops/Index"><i><img class="img-responsive myImg" src="~/Content/Images/TuxedoCoat.jpg" /></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="../FormalBottoms/Index"><i><img class="img-responsive myImg" src="~/Content/Images/TuxedoSlacks.jpg" /></i></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="../FormalShoes/Index"><i><img class="img-responsive myImg" src="~/Content/Images/TuxedoShoes.jpg" /> </i></a>
+                    </div>
+                    <div class="carousel-caption">
+                        <h2></h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="carouselText">Work Outfit</h2>
+                    <div class="col-md-4" style="margin:0;">
+                        <a href="../WorkTops/Index"><i><img class="img-responsive myImg" src="~/Content/Images/SuitCoat.jpg" /></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="../WorkBottoms/Index"><i><img class="img-responsive myImg" src="~/Content/Images/SuitSlacks.jpg" /></i></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="../WorkShoes/Index"><i><img class="img-responsive myImg" src="~/Content/Images/MensDressShoes.jpg" /></i></a>
+                    </div>
+                    <div class="carousel-caption">
+                        <h2></h2>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <h2 class="carouselText">Informal Outfit</h2>
+                    <div class="col-md-4" style="margin:0;">
+                        <a href="../InformalTops/Index"><i><img class="img-responsive myImg" src="~/Content/Images/InformalShirt.jpg" /></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="../InformalBottoms/Index"><i><img class="img-responsive myImg" src="~/Content/Images/jeans.jpg" /></i></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="../InformalShoes/Index"> <i><img class="img-responsive myImg" src="~/Content/Images/mensInformalShoes.jpg" /></i></a>
+                    </div>
+                    <div class="carousel-caption">
+                        <h2></h2>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <h2 class="carouselText">Leisure Outfit</h2>
+                    <div class="col-md-4" style="margin:0; padding-top:0;">
+                        <a href="../LeisureTops/Index"><i><img class="img-responsive myImg" src="~/Content/Images/Athletictop.jpg" /></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="../LeisureBottoms/Index"><i><img class="img-responsive myImg" src="~/Content/Images/athleticbottom.jpg" /></i></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="../LeisureShoes/Index"> <i><img class="img-responsive myImg" src="~/Content/Images/tennisshoes.jpg" /></i></a>
+                    </div>
+                    <div class="carousel-caption">
+                        <h2></h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="carouselText">Accesories</h2>
+                    <div class="col-md-4" style="margin:0;">
+                        <a href="../LeisureAccessories/Index"><i><img class="img-responsive myImg" src="~/Content/Images/glassesAccessories.jpg" /></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="../InformalAccessories/Index"><i><img class="img-responsive myImg" src="~/Content/Images/watchAccessory.jpg" /></i></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="../FormalAccessories/Index"><i><img class="img-responsive myImg" src="~/Content/Images/beltAccessory.jpg" /></i></a>
+                    </div>
+                    <div class="carousel-caption">
+                        <h2></h2>
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr style="background-color:#FFF6F0; border-bottom:3px; border-color:#474E5D; margin:0;" />
+<div class="jumbotron lightBackground">
+    <div>
+        <h1 class="h1Section">Remember... You can customize a new outfit</h1><!--used h1Section class in many places for larger print, font size and family, color, and text-aligned. -->
+
+    </div>
+
+    <div class="row afterLoc">
+        <!--the afterLoc class is to add padding -->
+        <div class="col-md-7 col-sm-12 col-xs-12 centered">
+            <!--I used 3 size designations depending on size of the screen, the smaller screens get full coverage for each column-->
+            <h2>Easy AS 1-2-3</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu iat nulla pariatur."</p>
+            <a href="../FormalOutfits/" class="button" role="button">Customize Here!</a>
+        </div>
+        <div class="col-md-5 col-sm-12 col-xs-12">
+            <img class="img-responsive myImg" src="~/Content/Images/Ensemble.jpg" />
+        </div>
+    </div>
+    <div class="row afterLoc">
+        <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" style="width:500px; height:281.25px" src="https://www.youtube.com/embed/I_Uat5OwFlE?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row afterLoc">
+            <!--the afterLoc class is to add padding -->
+            <div class="col-md-7 col-sm-12 col-xs-12 centered">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu iat nulla pariatur."</p>
+                <a href="../InformalOutfits/" class="button" role="button">Customize Here!</a>
+            </div>
+        </div>
+    </div>
+</div>

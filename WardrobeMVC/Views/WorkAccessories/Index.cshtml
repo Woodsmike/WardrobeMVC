@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WardrobeMVC.Models.WorkAccessory>
+
+@{
+    ViewBag.Title = "Work Accessory";
+}
+
+<div>
+    <h1 class="reviewH1 softWhiteBG">Work Accessories</h1>
+
+    <h3 class="reviewH3 softWhiteBG">
+        @Html.ActionLink("What work accessories do you want to add?", "Create")
+    </h3>
+</div>
+<div class="container-fluid softWhiteBG1" style="margin:auto; padding-top:25px; margin-bottom:0;">
+
+    <div class="row">
+        @foreach (var item in Model)
+
+
+        {
+            <div class="col-md-2 card">
+                <a target="_blank" href=@Url.Content(item.WorkAccessoryPhoto)>
+                    <img class="myImgAcc" src=@Url.Content(item.WorkAccessoryPhoto) alt="Forest">
+                </a>
+                <h4>
+                    @Html.DisplayFor(modelItem => item.WorkAccessoryName)
+                </h4>
+                <h4>
+                    @Html.DisplayFor(modelItem => item.WorkAccessoryType)
+                </h4>
+
+
+
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.WorkAccessoryID }) &nbsp; &nbsp;|&nbsp; &nbsp;
+                    @Html.ActionLink("Details", "Details", new { id = item.WorkAccessoryID })
+
+                </p>
+
+            </div>
+        }
+    </div>
+</div>
+
+

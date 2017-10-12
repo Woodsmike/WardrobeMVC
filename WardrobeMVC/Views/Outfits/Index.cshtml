@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WardrobeMVC.Models.Outfit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h1 class="reviewH1 softWhiteBG">Outfits</h1>
+
+    <h3 class="reviewH3 softWhiteBG">
+        @Html.ActionLink("What bottoms do you want to add?", "Create")
+    </h3>
+</div>
+<div class="container" style="margin:auto; margin-top: 20px;">
+
+    @foreach (var item in Model)
+    {
+        <div class="card" style="margin-right:15px;">
+            <h1 class="well well-sm wellBGShoes">
+                <span><span>Outfit Name:  </span><span style="float:right;">@Html.DisplayFor(modelItem => item.OutfitName)</span></span>
+            </h1>
+            
+        
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MainOutfitID}) &nbsp; &nbsp;|&nbsp; &nbsp;
+                @Html.ActionLink("Details", "Details", new { id = item.MainOutfitID })
+            </p>
+        </div>
+        <br />
+        <br />
+    }
+</div>
+
+
+
+

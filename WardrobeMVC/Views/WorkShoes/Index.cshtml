@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WardrobeMVC.Models.WorkSho>
+
+@{
+    ViewBag.Title = "Work Shoes";
+}
+
+<div>
+    <h1 class="reviewH1 softWhiteBG">Work Shoes</h1>
+
+    <h3 class="reviewH3 softWhiteBG">
+        @Html.ActionLink("What work shoes do you want to add?", "Create")
+    </h3>
+</div>
+<div class="container" style="margin:auto; margin-top: 20px;">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-5 detail" style="margin-right:15px; margin-top:75px;">
+            <h1 class="well well-sm wellBGShoes">
+                <span><span>Brand:  </span><span style="float:right;">@Html.DisplayFor(modelItem => item.WorkShoesName)</span></span>
+            </h1>
+            <h3 class="well well-sm wellBGShoes">
+                <span>Type: </span><span style="float:right;"> @Html.DisplayFor(modelItem => item.WorkShoesType)</span>
+            </h3>
+         
+        </div>
+        <div class="col-md-5 detail" style="margin:auto; margin-left:150px; padding-bottom: 5.2px; margin-bottom:25px;">
+            <h2>
+                <img class="myImgShoes" src=@Url.Content(item.WorkShoesPhoto) />
+            </h2>
+            <p style="font-size:25px; text-align:center;">
+                @Html.ActionLink("Edit", "Edit", new { id = item.WorkShoesID }) &nbsp; &nbsp;|&nbsp; &nbsp;
+                @Html.ActionLink("Details", "Details", new { id = item.WorkShoesID })
+            </p>
+        </div>
+        <br />
+        <br />
+    }
+</div>
+
+
+

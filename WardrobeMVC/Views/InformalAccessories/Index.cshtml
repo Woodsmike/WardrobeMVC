@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WardrobeMVC.Models.InformalAccessory>
+
+@{
+    ViewBag.Title = "Informal Accessory";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h1 class="reviewH1 softWhiteBG">Informal Accessories</h1>
+
+    <h3 class="reviewH3 softWhiteBG">
+        @Html.ActionLink("What formal accessories do you want to add?", "Create")
+    </h3>
+</div>
+<div class="container-fluid softWhiteBG1" style="margin:auto; padding-top:25px; margin-bottom:0;">
+
+    <div class="row">
+        @foreach (var item in Model)
+
+
+        {
+            <div class="col-md-2 card">
+                <a target="_blank" href=@Url.Content(item.InformalAccessoryPhoto)>
+                    <img class="myImgAcc" src=@Url.Content(item.InformalAccessoryPhoto) alt="Forest">
+                </a>
+                <h4>
+                    @Html.DisplayFor(modelItem => item.InformalAccessoryName)
+                </h4>
+                <h4>
+                    @Html.DisplayFor(modelItem => item.InformalAccessoryType)
+                </h4>
+
+
+
+                <p style="font-size:25px; text-align:center;">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.InformalAccessoryID }) &nbsp; &nbsp;|&nbsp; &nbsp;
+                    @Html.ActionLink("Details", "Details", new { id = item.InformalAccessoryID })
+
+                </p>
+
+            </div>
+        }
+    </div>
+</div>
+

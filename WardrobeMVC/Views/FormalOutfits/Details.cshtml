@@ -1,0 +1,41 @@
+﻿@model WardrobeMVC.Models.FormalOutfit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h3 style="text-align:center; color:#FFF6F0; font-size:50px; font-family: 'Lemonada';">Details</h3>
+
+<hr />
+<div class="container-fluid" id="backgroundIMG">
+    <h1 class="h1Section" style="margin-top:20px;">Formal Outfit</h1>
+    <div class="col-md-9" style="padding-top:60px;">
+        <span class="spanAlign">Top Brand:&nbsp;&nbsp;&nbsp; &nbsp;@Html.DisplayFor(model => model.FormalTop.FormalTopName)</span>
+    </div>
+    <div class="col-md-3 img-responsive card">
+        <img id="imgDetails" src="/Content/Images/TuxedoCoat.jpg" />
+    </div>
+    <div class="col-md-9" style="padding-top:60px;">
+        <span class="spanAlign">Bottom Brand: &nbsp;&nbsp;&nbsp; &nbsp;@Html.DisplayFor(model => model.FormalBottom.FormalBottomName)</span>
+    </div>
+    <div class="col-md-3 img-responsive card">
+        <img id="imgDetails" src="/Content/Images/TuxedoSlacks.jpg" />
+    </div>
+    <div class="col-md-9"style="padding-top:60px;">
+        <span class="spanAlign">Shoe Brand: &nbsp;&nbsp;&nbsp; &nbsp;@Html.DisplayFor(model => model.FormalSho.FormalShoesName)</span>
+    </div>
+    <div class="col-md-3 img-responsive card">
+        <img id="imgDetails" style="width:130px;"src="/Content/Images/TuxedoShoes.jpg" />
+    </div>
+    <div class="col-md-9"style="padding-top:60px;">
+        <span class="spanAlign">Accessory Brand: &nbsp;&nbsp;&nbsp; &nbsp;@Html.DisplayFor(model => model.FormalAccessory.FormalAccessoryName)</span>
+    </div>
+    <div class="col-md-3 img-responsive card" >
+        <img id="imgDetails" src ="/Content/Images/watchAccessory.jpg" />
+    </div>
+      
+</div>
+<p style="font-size:25px; text-align:center;">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FormalOutfitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

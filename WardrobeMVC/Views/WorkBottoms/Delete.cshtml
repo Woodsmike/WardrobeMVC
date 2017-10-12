@@ -1,0 +1,72 @@
+﻿@model WardrobeMVC.Models.WorkBottom
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>WorkBottom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkBottomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkBottomName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkBottomPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkBottomPhoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkBottomColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkBottomColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkBottomSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkBottomSeason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkBottomOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkBottomOccasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkBottomType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkBottomType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

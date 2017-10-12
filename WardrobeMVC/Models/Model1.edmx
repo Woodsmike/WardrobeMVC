@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MVCWardrobeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FormalAccessory">
+          <Key>
+            <PropertyRef Name="FormalAccessoryID" />
+          </Key>
+          <Property Name="FormalAccessoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormalAccessoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalAccessoryPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="FormalAccessoryColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalAccessorySeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalAccessoryOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalAccessoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormalBottom">
+          <Key>
+            <PropertyRef Name="FormalBottomID" />
+          </Key>
+          <Property Name="FormalBottomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormalBottomName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalBottomPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="FormalBottomColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalBottomSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalBottomOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalBottomType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormalOutfit">
+          <Key>
+            <PropertyRef Name="FormalOutfitID" />
+          </Key>
+          <Property Name="FormalOutfitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainOutfitID" Type="int" Nullable="false" />
+          <Property Name="FormalTopID" Type="int" Nullable="false" />
+          <Property Name="FormalBottomID" Type="int" Nullable="false" />
+          <Property Name="FormalShoesID" Type="int" Nullable="false" />
+          <Property Name="FormalAccessoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormalShoes">
+          <Key>
+            <PropertyRef Name="FormalShoesID" />
+          </Key>
+          <Property Name="FormalShoesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormalShoesName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalShoesPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="FormalShoesColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalShoesSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalShoesOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalShoesType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormalTop">
+          <Key>
+            <PropertyRef Name="FormalTopID" />
+          </Key>
+          <Property Name="FormalTopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormalTopName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalTopPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="FormalTopColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormalTopSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalTopOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormalTopType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InformalAccessory">
+          <Key>
+            <PropertyRef Name="InformalAccessoryID" />
+          </Key>
+          <Property Name="InformalAccessoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InformalAccessoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalAccessoryPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="InformalAccessoryColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalAccessorySeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalAccessoryOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalAccessoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InformalBottom">
+          <Key>
+            <PropertyRef Name="InformalBottomID" />
+          </Key>
+          <Property Name="InformalBottomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InformalBottomName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalBottomPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="InformalBottomColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalBottomSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalBottomOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalBottomType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InformalOutfit">
+          <Key>
+            <PropertyRef Name="InformalOutfitID" />
+          </Key>
+          <Property Name="InformalOutfitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainOutfitID" Type="int" Nullable="false" />
+          <Property Name="InformalTopID" Type="int" Nullable="false" />
+          <Property Name="InformalBottomID" Type="int" Nullable="false" />
+          <Property Name="InformalShoesID" Type="int" Nullable="false" />
+          <Property Name="InformalAccessoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InformalShoes">
+          <Key>
+            <PropertyRef Name="InformalShoesID" />
+          </Key>
+          <Property Name="InformalShoesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InformalShoesName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalShoesPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="InformalShoesColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalShoesSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalShoesOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalShoesType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InformalTop">
+          <Key>
+            <PropertyRef Name="InformalTopID" />
+          </Key>
+          <Property Name="InformalTopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InformalTopName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalTopPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="InformalTopColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InformalTopSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalTopOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="InformalTopType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeisureAccessory">
+          <Key>
+            <PropertyRef Name="LeisureAccessoryID" />
+          </Key>
+          <Property Name="LeisureAccessoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LeisureAccessoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureAccessoryPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="LeisureAccessoryColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureAccessorySeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureAccessoryOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureAccessoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeisureBottom">
+          <Key>
+            <PropertyRef Name="LeisureBottomID" />
+          </Key>
+          <Property Name="LeisureBottomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LeisureBottomName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureBottomPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="LeisureBottomColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureBottomSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureBottomOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureBottomType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeisureOutfit">
+          <Key>
+            <PropertyRef Name="LeisureOutfitID" />
+          </Key>
+          <Property Name="LeisureOutfitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainOutfitID" Type="int" Nullable="false" />
+          <Property Name="LeisureTopID" Type="int" Nullable="false" />
+          <Property Name="LeisureBottomID" Type="int" Nullable="false" />
+          <Property Name="LeisureShoesID" Type="int" Nullable="false" />
+          <Property Name="LeisureAccessoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeisureShoes">
+          <Key>
+            <PropertyRef Name="LeisureShoesID" />
+          </Key>
+          <Property Name="LeisureShoesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LeisureShoesName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureShoesPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="LeisureShoesColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureShoesSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureShoesOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureShoesType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeisureTop">
+          <Key>
+            <PropertyRef Name="LeisureTopID" />
+          </Key>
+          <Property Name="LeisureTopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LeisureTopName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureTopPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="LeisureTopColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LeisureTopSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureTopOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeisureTopType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Outfit">
+          <Key>
+            <PropertyRef Name="MainOutfitID" />
+          </Key>
+          <Property Name="MainOutfitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OutfitName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkAccessory">
+          <Key>
+            <PropertyRef Name="WorkAccessoryID" />
+          </Key>
+          <Property Name="WorkAccessoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkAccessoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkAccessoryPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="WorkAccessoryColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkAccessorySeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkAccessoryOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkAccessoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkBottom">
+          <Key>
+            <PropertyRef Name="WorkBottomID" />
+          </Key>
+          <Property Name="WorkBottomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkBottomName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkBottomPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="WorkBottomColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkBottomSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkBottomOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkBottomType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkOutfit">
+          <Key>
+            <PropertyRef Name="WorkOutfitID" />
+          </Key>
+          <Property Name="WorkOutfitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainOutfitID" Type="int" Nullable="false" />
+          <Property Name="WorkTopID" Type="int" Nullable="false" />
+          <Property Name="WorkBottomID" Type="int" Nullable="false" />
+          <Property Name="WorkShoesID" Type="int" Nullable="false" />
+          <Property Name="WorkAccessoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkShoes">
+          <Key>
+            <PropertyRef Name="WorkShoesID" />
+          </Key>
+          <Property Name="WorkShoesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkShoesName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkShoesPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="WorkShoesColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkShoesSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkShoesOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkShoesType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkTop">
+          <Key>
+            <PropertyRef Name="WorkTopID" />
+          </Key>
+          <Property Name="WorkTopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkTopName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkTopPhoto" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="WorkTopColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkTopSeason" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkTopOccasion" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkTopType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_FormalOutfit_FormalAccessory">
+          <End Role="FormalAccessory" Type="Self.FormalAccessory" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalAccessory">
+              <PropertyRef Name="FormalAccessoryID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_FormalBottom">
+          <End Role="FormalBottom" Type="Self.FormalBottom" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalBottom">
+              <PropertyRef Name="FormalBottomID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_FormalShoes">
+          <End Role="FormalShoes" Type="Self.FormalShoes" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalShoes">
+              <PropertyRef Name="FormalShoesID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_FormalTop">
+          <End Role="FormalTop" Type="Self.FormalTop" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalTop">
+              <PropertyRef Name="FormalTopID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalAccessory">
+          <End Role="InformalAccessory" Type="Self.InformalAccessory" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalAccessory">
+              <PropertyRef Name="InformalAccessoryID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalBottom">
+          <End Role="InformalBottom" Type="Self.InformalBottom" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalBottom">
+              <PropertyRef Name="InformalBottomID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalShoes">
+          <End Role="InformalShoes" Type="Self.InformalShoes" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalShoes">
+              <PropertyRef Name="InformalShoesID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalTop">
+          <End Role="InformalTop" Type="Self.InformalTop" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalTop">
+              <PropertyRef Name="InformalTopID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureAccessory">
+          <End Role="LeisureAccessory" Type="Self.LeisureAccessory" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureAccessory">
+              <PropertyRef Name="LeisureAccessoryID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureBottom">
+          <End Role="LeisureBottom" Type="Self.LeisureBottom" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureBottom">
+              <PropertyRef Name="LeisureBottomID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureShoes">
+          <End Role="LeisureShoes" Type="Self.LeisureShoes" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureShoes">
+              <PropertyRef Name="LeisureShoesID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureTop">
+          <End Role="LeisureTop" Type="Self.LeisureTop" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureTop">
+              <PropertyRef Name="LeisureTopID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkAccessory">
+          <End Role="WorkAccessory" Type="Self.WorkAccessory" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkAccessory">
+              <PropertyRef Name="WorkAccessoryID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkBottom">
+          <End Role="WorkBottom" Type="Self.WorkBottom" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkBottom">
+              <PropertyRef Name="WorkBottomID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkShoes">
+          <End Role="WorkShoes" Type="Self.WorkShoes" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkShoes">
+              <PropertyRef Name="WorkShoesID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkTop">
+          <End Role="WorkTop" Type="Self.WorkTop" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTop">
+              <PropertyRef Name="WorkTopID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MVCWardrobeModelStoreContainer">
+          <EntitySet Name="FormalAccessory" EntityType="Self.FormalAccessory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormalBottom" EntityType="Self.FormalBottom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormalOutfit" EntityType="Self.FormalOutfit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormalShoes" EntityType="Self.FormalShoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormalTop" EntityType="Self.FormalTop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InformalAccessory" EntityType="Self.InformalAccessory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InformalBottom" EntityType="Self.InformalBottom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InformalOutfit" EntityType="Self.InformalOutfit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InformalShoes" EntityType="Self.InformalShoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InformalTop" EntityType="Self.InformalTop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LeisureAccessory" EntityType="Self.LeisureAccessory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LeisureBottom" EntityType="Self.LeisureBottom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LeisureOutfit" EntityType="Self.LeisureOutfit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LeisureShoes" EntityType="Self.LeisureShoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LeisureTop" EntityType="Self.LeisureTop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Outfit" EntityType="Self.Outfit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkAccessory" EntityType="Self.WorkAccessory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkBottom" EntityType="Self.WorkBottom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkOutfit" EntityType="Self.WorkOutfit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkShoes" EntityType="Self.WorkShoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkTop" EntityType="Self.WorkTop" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_FormalOutfit_FormalAccessory" Association="Self.FK_FormalOutfit_FormalAccessory">
+            <End Role="FormalAccessory" EntitySet="FormalAccessory" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_FormalBottom" Association="Self.FK_FormalOutfit_FormalBottom">
+            <End Role="FormalBottom" EntitySet="FormalBottom" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_FormalShoes" Association="Self.FK_FormalOutfit_FormalShoes">
+            <End Role="FormalShoes" EntitySet="FormalShoes" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_FormalTop" Association="Self.FK_FormalOutfit_FormalTop">
+            <End Role="FormalTop" EntitySet="FormalTop" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_Outfit" Association="Self.FK_FormalOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfit" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalAccessory" Association="Self.FK_InformalOutfit_InformalAccessory">
+            <End Role="InformalAccessory" EntitySet="InformalAccessory" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalBottom" Association="Self.FK_InformalOutfit_InformalBottom">
+            <End Role="InformalBottom" EntitySet="InformalBottom" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalShoes" Association="Self.FK_InformalOutfit_InformalShoes">
+            <End Role="InformalShoes" EntitySet="InformalShoes" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalTop" Association="Self.FK_InformalOutfit_InformalTop">
+            <End Role="InformalTop" EntitySet="InformalTop" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_Outfit" Association="Self.FK_InformalOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfit" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureAccessory" Association="Self.FK_LeisureOutfit_LeisureAccessory">
+            <End Role="LeisureAccessory" EntitySet="LeisureAccessory" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureBottom" Association="Self.FK_LeisureOutfit_LeisureBottom">
+            <End Role="LeisureBottom" EntitySet="LeisureBottom" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureShoes" Association="Self.FK_LeisureOutfit_LeisureShoes">
+            <End Role="LeisureShoes" EntitySet="LeisureShoes" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureTop" Association="Self.FK_LeisureOutfit_LeisureTop">
+            <End Role="LeisureTop" EntitySet="LeisureTop" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_Outfit" Association="Self.FK_LeisureOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfit" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_Outfit" Association="Self.FK_WorkOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfit" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkAccessory" Association="Self.FK_WorkOutfit_WorkAccessory">
+            <End Role="WorkAccessory" EntitySet="WorkAccessory" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkBottom" Association="Self.FK_WorkOutfit_WorkBottom">
+            <End Role="WorkBottom" EntitySet="WorkBottom" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkShoes" Association="Self.FK_WorkOutfit_WorkShoes">
+            <End Role="WorkShoes" EntitySet="WorkShoes" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkTop" Association="Self.FK_WorkOutfit_WorkTop">
+            <End Role="WorkTop" EntitySet="WorkTop" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfit" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MVCWardrobeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FormalAccessory">
+          <Key>
+            <PropertyRef Name="FormalAccessoryID" />
+          </Key>
+          <Property Name="FormalAccessoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormalAccessoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalAccessoryPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalAccessoryColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalAccessorySeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalAccessoryOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalAccessoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FormalOutfits" Relationship="Self.FK_FormalOutfit_FormalAccessory" FromRole="FormalAccessory" ToRole="FormalOutfit" />
+        </EntityType>
+        <EntityType Name="FormalBottom">
+          <Key>
+            <PropertyRef Name="FormalBottomID" />
+          </Key>
+          <Property Name="FormalBottomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormalBottomName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalBottomPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalBottomColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalBottomSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalBottomOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalBottomType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FormalOutfits" Relationship="Self.FK_FormalOutfit_FormalBottom" FromRole="FormalBottom" ToRole="FormalOutfit" />
+        </EntityType>
+        <EntityType Name="FormalOutfit">
+          <Key>
+            <PropertyRef Name="FormalOutfitID" />
+          </Key>
+          <Property Name="FormalOutfitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainOutfitID" Type="Int32" Nullable="false" />
+          <Property Name="FormalTopID" Type="Int32" Nullable="false" />
+          <Property Name="FormalBottomID" Type="Int32" Nullable="false" />
+          <Property Name="FormalShoesID" Type="Int32" Nullable="false" />
+          <Property Name="FormalAccessoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="FormalAccessory" Relationship="Self.FK_FormalOutfit_FormalAccessory" FromRole="FormalOutfit" ToRole="FormalAccessory" />
+          <NavigationProperty Name="FormalBottom" Relationship="Self.FK_FormalOutfit_FormalBottom" FromRole="FormalOutfit" ToRole="FormalBottom" />
+          <NavigationProperty Name="FormalSho" Relationship="Self.FK_FormalOutfit_FormalShoes" FromRole="FormalOutfit" ToRole="FormalShoes" />
+          <NavigationProperty Name="FormalTop" Relationship="Self.FK_FormalOutfit_FormalTop" FromRole="FormalOutfit" ToRole="FormalTop" />
+          <NavigationProperty Name="Outfit" Relationship="Self.FK_FormalOutfit_Outfit" FromRole="FormalOutfit" ToRole="Outfit" />
+        </EntityType>
+        <EntityType Name="FormalSho">
+          <Key>
+            <PropertyRef Name="FormalShoesID" />
+          </Key>
+          <Property Name="FormalShoesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormalShoesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalShoesPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalShoesColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalShoesSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalShoesOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalShoesType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FormalOutfits" Relationship="Self.FK_FormalOutfit_FormalShoes" FromRole="FormalShoes" ToRole="FormalOutfit" />
+        </EntityType>
+        <EntityType Name="FormalTop">
+          <Key>
+            <PropertyRef Name="FormalTopID" />
+          </Key>
+          <Property Name="FormalTopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormalTopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalTopPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalTopColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalTopSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalTopOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormalTopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FormalOutfits" Relationship="Self.FK_FormalOutfit_FormalTop" FromRole="FormalTop" ToRole="FormalOutfit" />
+        </EntityType>
+        <EntityType Name="InformalAccessory">
+          <Key>
+            <PropertyRef Name="InformalAccessoryID" />
+          </Key>
+          <Property Name="InformalAccessoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InformalAccessoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalAccessoryPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalAccessoryColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalAccessorySeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalAccessoryOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalAccessoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="InformalOutfits" Relationship="Self.FK_InformalOutfit_InformalAccessory" FromRole="InformalAccessory" ToRole="InformalOutfit" />
+        </EntityType>
+        <EntityType Name="InformalBottom">
+          <Key>
+            <PropertyRef Name="InformalBottomID" />
+          </Key>
+          <Property Name="InformalBottomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InformalBottomName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalBottomPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalBottomColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalBottomSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalBottomOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalBottomType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="InformalOutfits" Relationship="Self.FK_InformalOutfit_InformalBottom" FromRole="InformalBottom" ToRole="InformalOutfit" />
+        </EntityType>
+        <EntityType Name="InformalOutfit">
+          <Key>
+            <PropertyRef Name="InformalOutfitID" />
+          </Key>
+          <Property Name="InformalOutfitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainOutfitID" Type="Int32" Nullable="false" />
+          <Property Name="InformalTopID" Type="Int32" Nullable="false" />
+          <Property Name="InformalBottomID" Type="Int32" Nullable="false" />
+          <Property Name="InformalShoesID" Type="Int32" Nullable="false" />
+          <Property Name="InformalAccessoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="InformalAccessory" Relationship="Self.FK_InformalOutfit_InformalAccessory" FromRole="InformalOutfit" ToRole="InformalAccessory" />
+          <NavigationProperty Name="InformalBottom" Relationship="Self.FK_InformalOutfit_InformalBottom" FromRole="InformalOutfit" ToRole="InformalBottom" />
+          <NavigationProperty Name="InformalSho" Relationship="Self.FK_InformalOutfit_InformalShoes" FromRole="InformalOutfit" ToRole="InformalShoes" />
+          <NavigationProperty Name="InformalTop" Relationship="Self.FK_InformalOutfit_InformalTop" FromRole="InformalOutfit" ToRole="InformalTop" />
+          <NavigationProperty Name="Outfit" Relationship="Self.FK_InformalOutfit_Outfit" FromRole="InformalOutfit" ToRole="Outfit" />
+        </EntityType>
+        <EntityType Name="InformalSho">
+          <Key>
+            <PropertyRef Name="InformalShoesID" />
+          </Key>
+          <Property Name="InformalShoesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InformalShoesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalShoesPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalShoesColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalShoesSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalShoesOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalShoesType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="InformalOutfits" Relationship="Self.FK_InformalOutfit_InformalShoes" FromRole="InformalShoes" ToRole="InformalOutfit" />
+        </EntityType>
+        <EntityType Name="InformalTop">
+          <Key>
+            <PropertyRef Name="InformalTopID" />
+          </Key>
+          <Property Name="InformalTopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InformalTopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalTopPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalTopColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InformalTopSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalTopOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InformalTopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="InformalOutfits" Relationship="Self.FK_InformalOutfit_InformalTop" FromRole="InformalTop" ToRole="InformalOutfit" />
+        </EntityType>
+        <EntityType Name="LeisureAccessory">
+          <Key>
+            <PropertyRef Name="LeisureAccessoryID" />
+          </Key>
+          <Property Name="LeisureAccessoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeisureAccessoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureAccessoryPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureAccessoryColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureAccessorySeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureAccessoryOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureAccessoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="LeisureOutfits" Relationship="Self.FK_LeisureOutfit_LeisureAccessory" FromRole="LeisureAccessory" ToRole="LeisureOutfit" />
+        </EntityType>
+        <EntityType Name="LeisureBottom">
+          <Key>
+            <PropertyRef Name="LeisureBottomID" />
+          </Key>
+          <Property Name="LeisureBottomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeisureBottomName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureBottomPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureBottomColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureBottomSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureBottomOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureBottomType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="LeisureOutfits" Relationship="Self.FK_LeisureOutfit_LeisureBottom" FromRole="LeisureBottom" ToRole="LeisureOutfit" />
+        </EntityType>
+        <EntityType Name="LeisureOutfit">
+          <Key>
+            <PropertyRef Name="LeisureOutfitID" />
+          </Key>
+          <Property Name="LeisureOutfitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainOutfitID" Type="Int32" Nullable="false" />
+          <Property Name="LeisureTopID" Type="Int32" Nullable="false" />
+          <Property Name="LeisureBottomID" Type="Int32" Nullable="false" />
+          <Property Name="LeisureShoesID" Type="Int32" Nullable="false" />
+          <Property Name="LeisureAccessoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="LeisureAccessory" Relationship="Self.FK_LeisureOutfit_LeisureAccessory" FromRole="LeisureOutfit" ToRole="LeisureAccessory" />
+          <NavigationProperty Name="LeisureBottom" Relationship="Self.FK_LeisureOutfit_LeisureBottom" FromRole="LeisureOutfit" ToRole="LeisureBottom" />
+          <NavigationProperty Name="LeisureSho" Relationship="Self.FK_LeisureOutfit_LeisureShoes" FromRole="LeisureOutfit" ToRole="LeisureShoes" />
+          <NavigationProperty Name="LeisureTop" Relationship="Self.FK_LeisureOutfit_LeisureTop" FromRole="LeisureOutfit" ToRole="LeisureTop" />
+          <NavigationProperty Name="Outfit" Relationship="Self.FK_LeisureOutfit_Outfit" FromRole="LeisureOutfit" ToRole="Outfit" />
+        </EntityType>
+        <EntityType Name="LeisureSho">
+          <Key>
+            <PropertyRef Name="LeisureShoesID" />
+          </Key>
+          <Property Name="LeisureShoesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeisureShoesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureShoesPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureShoesColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureShoesSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureShoesOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureShoesType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="LeisureOutfits" Relationship="Self.FK_LeisureOutfit_LeisureShoes" FromRole="LeisureShoes" ToRole="LeisureOutfit" />
+        </EntityType>
+        <EntityType Name="LeisureTop">
+          <Key>
+            <PropertyRef Name="LeisureTopID" />
+          </Key>
+          <Property Name="LeisureTopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeisureTopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureTopPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureTopColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureTopSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureTopOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeisureTopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="LeisureOutfits" Relationship="Self.FK_LeisureOutfit_LeisureTop" FromRole="LeisureTop" ToRole="LeisureOutfit" />
+        </EntityType>
+        <EntityType Name="Outfit">
+          <Key>
+            <PropertyRef Name="MainOutfitID" />
+          </Key>
+          <Property Name="MainOutfitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OutfitName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FormalOutfits" Relationship="Self.FK_FormalOutfit_Outfit" FromRole="Outfit" ToRole="FormalOutfit" />
+          <NavigationProperty Name="InformalOutfits" Relationship="Self.FK_InformalOutfit_Outfit" FromRole="Outfit" ToRole="InformalOutfit" />
+          <NavigationProperty Name="LeisureOutfits" Relationship="Self.FK_LeisureOutfit_Outfit" FromRole="Outfit" ToRole="LeisureOutfit" />
+          <NavigationProperty Name="WorkOutfits" Relationship="Self.FK_WorkOutfit_Outfit" FromRole="Outfit" ToRole="WorkOutfit" />
+        </EntityType>
+        <EntityType Name="WorkAccessory">
+          <Key>
+            <PropertyRef Name="WorkAccessoryID" />
+          </Key>
+          <Property Name="WorkAccessoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkAccessoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkAccessoryPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkAccessoryColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkAccessorySeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkAccessoryOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkAccessoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="WorkOutfits" Relationship="Self.FK_WorkOutfit_WorkAccessory" FromRole="WorkAccessory" ToRole="WorkOutfit" />
+        </EntityType>
+        <EntityType Name="WorkBottom">
+          <Key>
+            <PropertyRef Name="WorkBottomID" />
+          </Key>
+          <Property Name="WorkBottomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkBottomName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkBottomPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkBottomColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkBottomSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkBottomOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkBottomType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="WorkOutfits" Relationship="Self.FK_WorkOutfit_WorkBottom" FromRole="WorkBottom" ToRole="WorkOutfit" />
+        </EntityType>
+        <EntityType Name="WorkOutfit">
+          <Key>
+            <PropertyRef Name="WorkOutfitID" />
+          </Key>
+          <Property Name="WorkOutfitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainOutfitID" Type="Int32" Nullable="false" />
+          <Property Name="WorkTopID" Type="Int32" Nullable="false" />
+          <Property Name="WorkBottomID" Type="Int32" Nullable="false" />
+          <Property Name="WorkShoesID" Type="Int32" Nullable="false" />
+          <Property Name="WorkAccessoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Outfit" Relationship="Self.FK_WorkOutfit_Outfit" FromRole="WorkOutfit" ToRole="Outfit" />
+          <NavigationProperty Name="WorkAccessory" Relationship="Self.FK_WorkOutfit_WorkAccessory" FromRole="WorkOutfit" ToRole="WorkAccessory" />
+          <NavigationProperty Name="WorkBottom" Relationship="Self.FK_WorkOutfit_WorkBottom" FromRole="WorkOutfit" ToRole="WorkBottom" />
+          <NavigationProperty Name="WorkSho" Relationship="Self.FK_WorkOutfit_WorkShoes" FromRole="WorkOutfit" ToRole="WorkShoes" />
+          <NavigationProperty Name="WorkTop" Relationship="Self.FK_WorkOutfit_WorkTop" FromRole="WorkOutfit" ToRole="WorkTop" />
+        </EntityType>
+        <EntityType Name="WorkSho">
+          <Key>
+            <PropertyRef Name="WorkShoesID" />
+          </Key>
+          <Property Name="WorkShoesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkShoesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkShoesPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkShoesColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkShoesSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkShoesOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkShoesType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="WorkOutfits" Relationship="Self.FK_WorkOutfit_WorkShoes" FromRole="WorkShoes" ToRole="WorkOutfit" />
+        </EntityType>
+        <EntityType Name="WorkTop">
+          <Key>
+            <PropertyRef Name="WorkTopID" />
+          </Key>
+          <Property Name="WorkTopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkTopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkTopPhoto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkTopColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkTopSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkTopOccasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkTopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="WorkOutfits" Relationship="Self.FK_WorkOutfit_WorkTop" FromRole="WorkTop" ToRole="WorkOutfit" />
+        </EntityType>
+        <Association Name="FK_FormalOutfit_FormalAccessory">
+          <End Role="FormalAccessory" Type="Self.FormalAccessory" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalAccessory">
+              <PropertyRef Name="FormalAccessoryID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_FormalBottom">
+          <End Role="FormalBottom" Type="Self.FormalBottom" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalBottom">
+              <PropertyRef Name="FormalBottomID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_FormalShoes">
+          <End Role="FormalShoes" Type="Self.FormalSho" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalShoes">
+              <PropertyRef Name="FormalShoesID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_FormalTop">
+          <End Role="FormalTop" Type="Self.FormalTop" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormalTop">
+              <PropertyRef Name="FormalTopID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="FormalTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormalOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="FormalOutfit" Type="Self.FormalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="FormalOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalAccessory">
+          <End Role="InformalAccessory" Type="Self.InformalAccessory" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalAccessory">
+              <PropertyRef Name="InformalAccessoryID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalBottom">
+          <End Role="InformalBottom" Type="Self.InformalBottom" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalBottom">
+              <PropertyRef Name="InformalBottomID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalShoes">
+          <End Role="InformalShoes" Type="Self.InformalSho" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalShoes">
+              <PropertyRef Name="InformalShoesID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_InformalTop">
+          <End Role="InformalTop" Type="Self.InformalTop" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InformalTop">
+              <PropertyRef Name="InformalTopID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="InformalTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformalOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="InformalOutfit" Type="Self.InformalOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="InformalOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureAccessory">
+          <End Role="LeisureAccessory" Type="Self.LeisureAccessory" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureAccessory">
+              <PropertyRef Name="LeisureAccessoryID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureBottom">
+          <End Role="LeisureBottom" Type="Self.LeisureBottom" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureBottom">
+              <PropertyRef Name="LeisureBottomID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureShoes">
+          <End Role="LeisureShoes" Type="Self.LeisureSho" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureShoes">
+              <PropertyRef Name="LeisureShoesID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_LeisureTop">
+          <End Role="LeisureTop" Type="Self.LeisureTop" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeisureTop">
+              <PropertyRef Name="LeisureTopID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="LeisureTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeisureOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="LeisureOutfit" Type="Self.LeisureOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="LeisureOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_Outfit">
+          <End Role="Outfit" Type="Self.Outfit" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="MainOutfitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkAccessory">
+          <End Role="WorkAccessory" Type="Self.WorkAccessory" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkAccessory">
+              <PropertyRef Name="WorkAccessoryID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkAccessoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkBottom">
+          <End Role="WorkBottom" Type="Self.WorkBottom" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkBottom">
+              <PropertyRef Name="WorkBottomID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkBottomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkShoes">
+          <End Role="WorkShoes" Type="Self.WorkSho" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkShoes">
+              <PropertyRef Name="WorkShoesID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkShoesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkOutfit_WorkTop">
+          <End Role="WorkTop" Type="Self.WorkTop" Multiplicity="1" />
+          <End Role="WorkOutfit" Type="Self.WorkOutfit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTop">
+              <PropertyRef Name="WorkTopID" />
+            </Principal>
+            <Dependent Role="WorkOutfit">
+              <PropertyRef Name="WorkTopID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MVCWardrobeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FormalAccessories" EntityType="Self.FormalAccessory" />
+          <EntitySet Name="FormalBottoms" EntityType="Self.FormalBottom" />
+          <EntitySet Name="FormalOutfits" EntityType="Self.FormalOutfit" />
+          <EntitySet Name="FormalShoes" EntityType="Self.FormalSho" />
+          <EntitySet Name="FormalTops" EntityType="Self.FormalTop" />
+          <EntitySet Name="InformalAccessories" EntityType="Self.InformalAccessory" />
+          <EntitySet Name="InformalBottoms" EntityType="Self.InformalBottom" />
+          <EntitySet Name="InformalOutfits" EntityType="Self.InformalOutfit" />
+          <EntitySet Name="InformalShoes" EntityType="Self.InformalSho" />
+          <EntitySet Name="InformalTops" EntityType="Self.InformalTop" />
+          <EntitySet Name="LeisureAccessories" EntityType="Self.LeisureAccessory" />
+          <EntitySet Name="LeisureBottoms" EntityType="Self.LeisureBottom" />
+          <EntitySet Name="LeisureOutfits" EntityType="Self.LeisureOutfit" />
+          <EntitySet Name="LeisureShoes" EntityType="Self.LeisureSho" />
+          <EntitySet Name="LeisureTops" EntityType="Self.LeisureTop" />
+          <EntitySet Name="Outfits" EntityType="Self.Outfit" />
+          <EntitySet Name="WorkAccessories" EntityType="Self.WorkAccessory" />
+          <EntitySet Name="WorkBottoms" EntityType="Self.WorkBottom" />
+          <EntitySet Name="WorkOutfits" EntityType="Self.WorkOutfit" />
+          <EntitySet Name="WorkShoes" EntityType="Self.WorkSho" />
+          <EntitySet Name="WorkTops" EntityType="Self.WorkTop" />
+          <AssociationSet Name="FK_FormalOutfit_FormalAccessory" Association="Self.FK_FormalOutfit_FormalAccessory">
+            <End Role="FormalAccessory" EntitySet="FormalAccessories" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_FormalBottom" Association="Self.FK_FormalOutfit_FormalBottom">
+            <End Role="FormalBottom" EntitySet="FormalBottoms" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_FormalShoes" Association="Self.FK_FormalOutfit_FormalShoes">
+            <End Role="FormalShoes" EntitySet="FormalShoes" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_FormalTop" Association="Self.FK_FormalOutfit_FormalTop">
+            <End Role="FormalTop" EntitySet="FormalTops" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormalOutfit_Outfit" Association="Self.FK_FormalOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfits" />
+            <End Role="FormalOutfit" EntitySet="FormalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalAccessory" Association="Self.FK_InformalOutfit_InformalAccessory">
+            <End Role="InformalAccessory" EntitySet="InformalAccessories" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalBottom" Association="Self.FK_InformalOutfit_InformalBottom">
+            <End Role="InformalBottom" EntitySet="InformalBottoms" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalShoes" Association="Self.FK_InformalOutfit_InformalShoes">
+            <End Role="InformalShoes" EntitySet="InformalShoes" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_InformalTop" Association="Self.FK_InformalOutfit_InformalTop">
+            <End Role="InformalTop" EntitySet="InformalTops" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformalOutfit_Outfit" Association="Self.FK_InformalOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfits" />
+            <End Role="InformalOutfit" EntitySet="InformalOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureAccessory" Association="Self.FK_LeisureOutfit_LeisureAccessory">
+            <End Role="LeisureAccessory" EntitySet="LeisureAccessories" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureBottom" Association="Self.FK_LeisureOutfit_LeisureBottom">
+            <End Role="LeisureBottom" EntitySet="LeisureBottoms" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureShoes" Association="Self.FK_LeisureOutfit_LeisureShoes">
+            <End Role="LeisureShoes" EntitySet="LeisureShoes" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_LeisureTop" Association="Self.FK_LeisureOutfit_LeisureTop">
+            <End Role="LeisureTop" EntitySet="LeisureTops" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeisureOutfit_Outfit" Association="Self.FK_LeisureOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfits" />
+            <End Role="LeisureOutfit" EntitySet="LeisureOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_Outfit" Association="Self.FK_WorkOutfit_Outfit">
+            <End Role="Outfit" EntitySet="Outfits" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkAccessory" Association="Self.FK_WorkOutfit_WorkAccessory">
+            <End Role="WorkAccessory" EntitySet="WorkAccessories" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkBottom" Association="Self.FK_WorkOutfit_WorkBottom">
+            <End Role="WorkBottom" EntitySet="WorkBottoms" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkShoes" Association="Self.FK_WorkOutfit_WorkShoes">
+            <End Role="WorkShoes" EntitySet="WorkShoes" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkOutfit_WorkTop" Association="Self.FK_WorkOutfit_WorkTop">
+            <End Role="WorkTop" EntitySet="WorkTops" />
+            <End Role="WorkOutfit" EntitySet="WorkOutfits" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MVCWardrobeModelStoreContainer" CdmEntityContainer="MVCWardrobeEntities">
+          <EntitySetMapping Name="FormalAccessories">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.FormalAccessory">
+              <MappingFragment StoreEntitySet="FormalAccessory">
+                <ScalarProperty Name="FormalAccessoryID" ColumnName="FormalAccessoryID" />
+                <ScalarProperty Name="FormalAccessoryName" ColumnName="FormalAccessoryName" />
+                <ScalarProperty Name="FormalAccessoryPhoto" ColumnName="FormalAccessoryPhoto" />
+                <ScalarProperty Name="FormalAccessoryColor" ColumnName="FormalAccessoryColor" />
+                <ScalarProperty Name="FormalAccessorySeason" ColumnName="FormalAccessorySeason" />
+                <ScalarProperty Name="FormalAccessoryOccasion" ColumnName="FormalAccessoryOccasion" />
+                <ScalarProperty Name="FormalAccessoryType" ColumnName="FormalAccessoryType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormalBottoms">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.FormalBottom">
+              <MappingFragment StoreEntitySet="FormalBottom">
+                <ScalarProperty Name="FormalBottomID" ColumnName="FormalBottomID" />
+                <ScalarProperty Name="FormalBottomName" ColumnName="FormalBottomName" />
+                <ScalarProperty Name="FormalBottomPhoto" ColumnName="FormalBottomPhoto" />
+                <ScalarProperty Name="FormalBottomColor" ColumnName="FormalBottomColor" />
+                <ScalarProperty Name="FormalBottomSeason" ColumnName="FormalBottomSeason" />
+                <ScalarProperty Name="FormalBottomOccasion" ColumnName="FormalBottomOccasion" />
+                <ScalarProperty Name="FormalBottomType" ColumnName="FormalBottomType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormalOutfits">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.FormalOutfit">
+              <MappingFragment StoreEntitySet="FormalOutfit">
+                <ScalarProperty Name="FormalOutfitID" ColumnName="FormalOutfitID" />
+                <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+                <ScalarProperty Name="FormalTopID" ColumnName="FormalTopID" />
+                <ScalarProperty Name="FormalBottomID" ColumnName="FormalBottomID" />
+                <ScalarProperty Name="FormalShoesID" ColumnName="FormalShoesID" />
+                <ScalarProperty Name="FormalAccessoryID" ColumnName="FormalAccessoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormalShoes">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.FormalSho">
+              <MappingFragment StoreEntitySet="FormalShoes">
+                <ScalarProperty Name="FormalShoesID" ColumnName="FormalShoesID" />
+                <ScalarProperty Name="FormalShoesName" ColumnName="FormalShoesName" />
+                <ScalarProperty Name="FormalShoesPhoto" ColumnName="FormalShoesPhoto" />
+                <ScalarProperty Name="FormalShoesColor" ColumnName="FormalShoesColor" />
+                <ScalarProperty Name="FormalShoesSeason" ColumnName="FormalShoesSeason" />
+                <ScalarProperty Name="FormalShoesOccasion" ColumnName="FormalShoesOccasion" />
+                <ScalarProperty Name="FormalShoesType" ColumnName="FormalShoesType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormalTops">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.FormalTop">
+              <MappingFragment StoreEntitySet="FormalTop">
+                <ScalarProperty Name="FormalTopID" ColumnName="FormalTopID" />
+                <ScalarProperty Name="FormalTopName" ColumnName="FormalTopName" />
+                <ScalarProperty Name="FormalTopPhoto" ColumnName="FormalTopPhoto" />
+                <ScalarProperty Name="FormalTopColor" ColumnName="FormalTopColor" />
+                <ScalarProperty Name="FormalTopSeason" ColumnName="FormalTopSeason" />
+                <ScalarProperty Name="FormalTopOccasion" ColumnName="FormalTopOccasion" />
+                <ScalarProperty Name="FormalTopType" ColumnName="FormalTopType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformalAccessories">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.InformalAccessory">
+              <MappingFragment StoreEntitySet="InformalAccessory">
+                <ScalarProperty Name="InformalAccessoryID" ColumnName="InformalAccessoryID" />
+                <ScalarProperty Name="InformalAccessoryName" ColumnName="InformalAccessoryName" />
+                <ScalarProperty Name="InformalAccessoryPhoto" ColumnName="InformalAccessoryPhoto" />
+                <ScalarProperty Name="InformalAccessoryColor" ColumnName="InformalAccessoryColor" />
+                <ScalarProperty Name="InformalAccessorySeason" ColumnName="InformalAccessorySeason" />
+                <ScalarProperty Name="InformalAccessoryOccasion" ColumnName="InformalAccessoryOccasion" />
+                <ScalarProperty Name="InformalAccessoryType" ColumnName="InformalAccessoryType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformalBottoms">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.InformalBottom">
+              <MappingFragment StoreEntitySet="InformalBottom">
+                <ScalarProperty Name="InformalBottomID" ColumnName="InformalBottomID" />
+                <ScalarProperty Name="InformalBottomName" ColumnName="InformalBottomName" />
+                <ScalarProperty Name="InformalBottomPhoto" ColumnName="InformalBottomPhoto" />
+                <ScalarProperty Name="InformalBottomColor" ColumnName="InformalBottomColor" />
+                <ScalarProperty Name="InformalBottomSeason" ColumnName="InformalBottomSeason" />
+                <ScalarProperty Name="InformalBottomOccasion" ColumnName="InformalBottomOccasion" />
+                <ScalarProperty Name="InformalBottomType" ColumnName="InformalBottomType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformalOutfits">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.InformalOutfit">
+              <MappingFragment StoreEntitySet="InformalOutfit">
+                <ScalarProperty Name="InformalOutfitID" ColumnName="InformalOutfitID" />
+                <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+                <ScalarProperty Name="InformalTopID" ColumnName="InformalTopID" />
+                <ScalarProperty Name="InformalBottomID" ColumnName="InformalBottomID" />
+                <ScalarProperty Name="InformalShoesID" ColumnName="InformalShoesID" />
+                <ScalarProperty Name="InformalAccessoryID" ColumnName="InformalAccessoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformalShoes">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.InformalSho">
+              <MappingFragment StoreEntitySet="InformalShoes">
+                <ScalarProperty Name="InformalShoesID" ColumnName="InformalShoesID" />
+                <ScalarProperty Name="InformalShoesName" ColumnName="InformalShoesName" />
+                <ScalarProperty Name="InformalShoesPhoto" ColumnName="InformalShoesPhoto" />
+                <ScalarProperty Name="InformalShoesColor" ColumnName="InformalShoesColor" />
+                <ScalarProperty Name="InformalShoesSeason" ColumnName="InformalShoesSeason" />
+                <ScalarProperty Name="InformalShoesOccasion" ColumnName="InformalShoesOccasion" />
+                <ScalarProperty Name="InformalShoesType" ColumnName="InformalShoesType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformalTops">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.InformalTop">
+              <MappingFragment StoreEntitySet="InformalTop">
+                <ScalarProperty Name="InformalTopID" ColumnName="InformalTopID" />
+                <ScalarProperty Name="InformalTopName" ColumnName="InformalTopName" />
+                <ScalarProperty Name="InformalTopPhoto" ColumnName="InformalTopPhoto" />
+                <ScalarProperty Name="InformalTopColor" ColumnName="InformalTopColor" />
+                <ScalarProperty Name="InformalTopSeason" ColumnName="InformalTopSeason" />
+                <ScalarProperty Name="InformalTopOccasion" ColumnName="InformalTopOccasion" />
+                <ScalarProperty Name="InformalTopType" ColumnName="InformalTopType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeisureAccessories">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureAccessory">
+              <MappingFragment StoreEntitySet="LeisureAccessory">
+                <ScalarProperty Name="LeisureAccessoryID" ColumnName="LeisureAccessoryID" />
+                <ScalarProperty Name="LeisureAccessoryName" ColumnName="LeisureAccessoryName" />
+                <ScalarProperty Name="LeisureAccessoryPhoto" ColumnName="LeisureAccessoryPhoto" />
+                <ScalarProperty Name="LeisureAccessoryColor" ColumnName="LeisureAccessoryColor" />
+                <ScalarProperty Name="LeisureAccessorySeason" ColumnName="LeisureAccessorySeason" />
+                <ScalarProperty Name="LeisureAccessoryOccasion" ColumnName="LeisureAccessoryOccasion" />
+                <ScalarProperty Name="LeisureAccessoryType" ColumnName="LeisureAccessoryType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeisureBottoms">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureBottom">
+              <MappingFragment StoreEntitySet="LeisureBottom">
+                <ScalarProperty Name="LeisureBottomID" ColumnName="LeisureBottomID" />
+                <ScalarProperty Name="LeisureBottomName" ColumnName="LeisureBottomName" />
+                <ScalarProperty Name="LeisureBottomPhoto" ColumnName="LeisureBottomPhoto" />
+                <ScalarProperty Name="LeisureBottomColor" ColumnName="LeisureBottomColor" />
+                <ScalarProperty Name="LeisureBottomSeason" ColumnName="LeisureBottomSeason" />
+                <ScalarProperty Name="LeisureBottomOccasion" ColumnName="LeisureBottomOccasion" />
+                <ScalarProperty Name="LeisureBottomType" ColumnName="LeisureBottomType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeisureOutfits">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureOutfit">
+              <MappingFragment StoreEntitySet="LeisureOutfit">
+                <ScalarProperty Name="LeisureOutfitID" ColumnName="LeisureOutfitID" />
+                <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+                <ScalarProperty Name="LeisureTopID" ColumnName="LeisureTopID" />
+                <ScalarProperty Name="LeisureBottomID" ColumnName="LeisureBottomID" />
+                <ScalarProperty Name="LeisureShoesID" ColumnName="LeisureShoesID" />
+                <ScalarProperty Name="LeisureAccessoryID" ColumnName="LeisureAccessoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeisureShoes">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureSho">
+              <MappingFragment StoreEntitySet="LeisureShoes">
+                <ScalarProperty Name="LeisureShoesID" ColumnName="LeisureShoesID" />
+                <ScalarProperty Name="LeisureShoesName" ColumnName="LeisureShoesName" />
+                <ScalarProperty Name="LeisureShoesPhoto" ColumnName="LeisureShoesPhoto" />
+                <ScalarProperty Name="LeisureShoesColor" ColumnName="LeisureShoesColor" />
+                <ScalarProperty Name="LeisureShoesSeason" ColumnName="LeisureShoesSeason" />
+                <ScalarProperty Name="LeisureShoesOccasion" ColumnName="LeisureShoesOccasion" />
+                <ScalarProperty Name="LeisureShoesType" ColumnName="LeisureShoesType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeisureTops">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.LeisureTop">
+              <MappingFragment StoreEntitySet="LeisureTop">
+                <ScalarProperty Name="LeisureTopID" ColumnName="LeisureTopID" />
+                <ScalarProperty Name="LeisureTopName" ColumnName="LeisureTopName" />
+                <ScalarProperty Name="LeisureTopPhoto" ColumnName="LeisureTopPhoto" />
+                <ScalarProperty Name="LeisureTopColor" ColumnName="LeisureTopColor" />
+                <ScalarProperty Name="LeisureTopSeason" ColumnName="LeisureTopSeason" />
+                <ScalarProperty Name="LeisureTopOccasion" ColumnName="LeisureTopOccasion" />
+                <ScalarProperty Name="LeisureTopType" ColumnName="LeisureTopType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Outfits">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.Outfit">
+              <MappingFragment StoreEntitySet="Outfit">
+                <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+                <ScalarProperty Name="OutfitName" ColumnName="OutfitName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkAccessories">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.WorkAccessory">
+              <MappingFragment StoreEntitySet="WorkAccessory">
+                <ScalarProperty Name="WorkAccessoryID" ColumnName="WorkAccessoryID" />
+                <ScalarProperty Name="WorkAccessoryName" ColumnName="WorkAccessoryName" />
+                <ScalarProperty Name="WorkAccessoryPhoto" ColumnName="WorkAccessoryPhoto" />
+                <ScalarProperty Name="WorkAccessoryColor" ColumnName="WorkAccessoryColor" />
+                <ScalarProperty Name="WorkAccessorySeason" ColumnName="WorkAccessorySeason" />
+                <ScalarProperty Name="WorkAccessoryOccasion" ColumnName="WorkAccessoryOccasion" />
+                <ScalarProperty Name="WorkAccessoryType" ColumnName="WorkAccessoryType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkBottoms">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.WorkBottom">
+              <MappingFragment StoreEntitySet="WorkBottom">
+                <ScalarProperty Name="WorkBottomID" ColumnName="WorkBottomID" />
+                <ScalarProperty Name="WorkBottomName" ColumnName="WorkBottomName" />
+                <ScalarProperty Name="WorkBottomPhoto" ColumnName="WorkBottomPhoto" />
+                <ScalarProperty Name="WorkBottomColor" ColumnName="WorkBottomColor" />
+                <ScalarProperty Name="WorkBottomSeason" ColumnName="WorkBottomSeason" />
+                <ScalarProperty Name="WorkBottomOccasion" ColumnName="WorkBottomOccasion" />
+                <ScalarProperty Name="WorkBottomType" ColumnName="WorkBottomType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkOutfits">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.WorkOutfit">
+              <MappingFragment StoreEntitySet="WorkOutfit">
+                <ScalarProperty Name="WorkOutfitID" ColumnName="WorkOutfitID" />
+                <ScalarProperty Name="MainOutfitID" ColumnName="MainOutfitID" />
+                <ScalarProperty Name="WorkTopID" ColumnName="WorkTopID" />
+                <ScalarProperty Name="WorkBottomID" ColumnName="WorkBottomID" />
+                <ScalarProperty Name="WorkShoesID" ColumnName="WorkShoesID" />
+                <ScalarProperty Name="WorkAccessoryID" ColumnName="WorkAccessoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkShoes">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.WorkSho">
+              <MappingFragment StoreEntitySet="WorkShoes">
+                <ScalarProperty Name="WorkShoesID" ColumnName="WorkShoesID" />
+                <ScalarProperty Name="WorkShoesName" ColumnName="WorkShoesName" />
+                <ScalarProperty Name="WorkShoesPhoto" ColumnName="WorkShoesPhoto" />
+                <ScalarProperty Name="WorkShoesColor" ColumnName="WorkShoesColor" />
+                <ScalarProperty Name="WorkShoesSeason" ColumnName="WorkShoesSeason" />
+                <ScalarProperty Name="WorkShoesOccasion" ColumnName="WorkShoesOccasion" />
+                <ScalarProperty Name="WorkShoesType" ColumnName="WorkShoesType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkTops">
+            <EntityTypeMapping TypeName="MVCWardrobeModel.WorkTop">
+              <MappingFragment StoreEntitySet="WorkTop">
+                <ScalarProperty Name="WorkTopID" ColumnName="WorkTopID" />
+                <ScalarProperty Name="WorkTopName" ColumnName="WorkTopName" />
+                <ScalarProperty Name="WorkTopPhoto" ColumnName="WorkTopPhoto" />
+                <ScalarProperty Name="WorkTopColor" ColumnName="WorkTopColor" />
+                <ScalarProperty Name="WorkTopSeason" ColumnName="WorkTopSeason" />
+                <ScalarProperty Name="WorkTopOccasion" ColumnName="WorkTopOccasion" />
+                <ScalarProperty Name="WorkTopType" ColumnName="WorkTopType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b0109ecdf53b4fc9a594626dafbcde98" Name="Diagram1">
+        <EntityTypeShape EntityType="MVCWardrobeModel.FormalAccessory" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.FormalBottom" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.FormalOutfit" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.FormalSho" Width="1.5" PointX="0.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.FormalTop" Width="1.5" PointX="0.75" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.InformalAccessory" Width="1.5" PointX="10.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.InformalBottom" Width="1.5" PointX="6.875" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.InformalOutfit" Width="1.5" PointX="9.375" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.InformalSho" Width="1.5" PointX="8.375" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.InformalTop" Width="1.5" PointX="10.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.LeisureAccessory" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.LeisureBottom" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.LeisureOutfit" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.LeisureSho" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.LeisureTop" Width="1.5" PointX="0.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.Outfit" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.WorkAccessory" Width="1.5" PointX="0.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.WorkBottom" Width="1.5" PointX="0.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.WorkOutfit" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.WorkSho" Width="1.5" PointX="0.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCWardrobeModel.WorkTop" Width="1.5" PointX="0.75" PointY="44.375" IsExpanded="true" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_FormalOutfit_FormalAccessory" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_FormalOutfit_FormalBottom" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_FormalOutfit_FormalShoes" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_FormalOutfit_FormalTop" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_FormalOutfit_Outfit" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_InformalOutfit_InformalAccessory" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_InformalOutfit_InformalBottom" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_InformalOutfit_InformalShoes" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_InformalOutfit_InformalTop" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_InformalOutfit_Outfit" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_LeisureOutfit_LeisureAccessory" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_LeisureOutfit_LeisureBottom" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_LeisureOutfit_LeisureShoes" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_LeisureOutfit_LeisureTop" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_LeisureOutfit_Outfit" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_WorkOutfit_Outfit" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_WorkOutfit_WorkAccessory" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_WorkOutfit_WorkBottom" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_WorkOutfit_WorkShoes" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCWardrobeModel.FK_WorkOutfit_WorkTop" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

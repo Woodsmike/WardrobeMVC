@@ -1,0 +1,401 @@
+﻿/*font-family: 'Raleway', sans-serif; font-family: 'Open Sans Condensed', sans-serif; 
+    font-family: 'PT Sans', sans-serif; font-family: 'Saira Condensed', sans-serif; 
+    font-family: 'Sedgwick Ave Display', cursive; font-family: 'Libre Baskerville', serif;*/
+body {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navvy.navbar.navbar-static-top { /*the next 3 items keep the navbar pinned
+                                      to the top and keep the background color white*/
+    margin-bottom: 0;
+    padding-top: 6px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    color: #010300;
+    background-color: #B8A499;
+}
+
+.navvy a {
+    color: #010300;
+}
+ 
+
+.navbar-header { /*this item keeps the navbar links pushed to the right on the navbar*/
+    nav-right: auto;
+    padding-top: 5px;
+}
+
+.navbar-toggle { /*this class and the next class is to all the hamburger icon to be seen*/
+    border: 1px solid #FFF6F0;
+}
+
+.icon-bar {
+    border: 1px solid#010300;
+}
+
+
+li {
+    font-size: 20px;
+}
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-shadow: 1px 2px #FFF6F0;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #565553;
+        }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B8A499;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #FFF6F0;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.txtShd {
+    text-shadow: 1px 2px #FFF6F0;
+}
+#middleHover {
+    margin-right: 35px;
+    font-weight: bold;
+    font-size: 28px;
+}
+    
+/*Carousel style*/
+#carStyle {
+    padding-top: 25px;
+    padding-bottom: 650px;
+    margin-bottom: 0;
+    height: 275px;
+}
+.carouselText {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lemonada';
+    color: #010300;
+    padding-top: 0;
+    padding-bottom: 30px;
+}
+
+.carousel-inner > .item {
+    width: 100%;
+}
+
+.lightBackground {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #B8A499;
+    margin-bottom: 0;
+}
+
+.centered {
+    text-align: center;
+    color: #010300;
+}
+
+.wellBGShoes {
+    color: #010300;
+    background-color: #B8A499;
+}
+
+.softWhiteBG {
+    background-color: #B8A499;
+    background-size: cover;
+}
+
+.softWhiteBG1 {
+    background-image: url('Images/clearWater.jpg');
+    background-size: cover;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.h1Section {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 0;
+    margin-top: 0;
+    color: #010300;
+    font-family: 'Lemonada';
+}
+
+.afterLoc {
+    margin: 0;
+    padding: 40px;
+}
+
+.lightWithBG {
+    margin: 0;
+    padding: 40px;
+    background-color: #B8A499;
+}
+
+.myImg {
+    margin: auto;
+    height: 400px;
+}
+
+    .myImg:hover {
+        opacity: 0.7;
+    }
+
+.myImgAcc {
+    height: 150px;
+}
+
+.myImg:hover {
+    opacity: 0.7;
+}
+
+.myImgShoes {
+    margin: auto;
+    height: 300px;
+    width: 450px;
+}
+
+    .myImgShoes:hover {
+        opacity: 0.7;
+    }
+
+.button {
+    background-color: #565553;
+    border: 2px;
+    border-radius: 6px;
+    border-color: #565553;
+    color: #FFF6F0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -moz-transition: 2s;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    -o-transition: width 2s;
+    transition: width 2s;
+}
+
+    .button:hover {
+        width: 300px;
+        height: 75px;
+        color: #FFF6F0;
+    }
+
+
+.button1 {
+    background-color: #FFF6F0;
+    border: 3px;
+    border-color: #565553;
+    border-radius: 6px;
+    color: #565553;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    -o-transition: width 2s;
+    -moz-transition: 2s;
+    transition: width 2s;
+}
+
+    .button1:hover {
+        width: 300px;
+        height: 75px;
+    }
+
+
+#myBtn {
+    background-color: #565553;
+    text-align: center;
+    cursor: pointer;
+}
+
+#locFooter {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 0;
+    /*padding-top: 20px;*/
+    color: #010300;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+
+/* This section is for the Review Index styling*/
+
+
+
+.reviewH1 {
+    color: #010300;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Shadows Into Light Two', cursive;
+    margin-bottom: 0;
+}
+
+.reviewH3 {
+    background-size: contain;
+    background-color: #565553;
+    text-align: center;
+    font-family: 'Shadows Into Light Two', cursive;
+    padding-bottom: 10px;
+}
+
+a {
+    color: #0071BB;
+}
+
+.link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*for the index page*/
+.imgStyle {
+    height: 260px;
+}
+/*for the detail page*/
+.imgStyleD {
+    height: 280px;
+    width: 400px;
+}
+
+#imgDetails{
+    height:170px;
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.detail {
+    border: .5px solid black;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,2.6);
+    transition: 0.3s;
+    color: #010300;
+}
+
+.card {
+    border: .5px solid black;
+    margin: 15px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,2.6);
+    transition: 0.3s;    
+    width: 12.25%;
+    background-color: #B8A499;
+}
+
+    .card:hover {
+        box-shadow: 0 8px 16px 3px rgba(0,0,0,0.9);
+    }
+    /*lightbox*/
+.rowLH > .column {
+    padding: 0 8px;
+}
+
+.rowLH:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+
+
+
+img.hover-shadow {
+    transition: 0.3s
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+/*for Index pics*/
+.imgIndex {
+    position: relative;
+    /*float: left;*/
+    width: 175px;
+    height: 175px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#backgroundIMG {
+    background-image: url('Images/Closet background.jpg');
+    background-size:1580px;
+}
+.spanAlign {
+    float:right;
+    padding-right: 65px;
+    font-size: 45px;
+    font-family: 'Lemonada';
+    color: #010300;
+}

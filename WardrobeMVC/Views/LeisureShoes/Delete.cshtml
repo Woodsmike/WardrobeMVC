@@ -1,0 +1,72 @@
+﻿@model WardrobeMVC.Models.LeisureSho
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LeisureSho</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LeisureShoesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeisureShoesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeisureShoesPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeisureShoesPhoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeisureShoesColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeisureShoesColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeisureShoesSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeisureShoesSeason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeisureShoesOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeisureShoesOccasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeisureShoesType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeisureShoesType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
